@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guide — Évaluation par les pairs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-stone-50 text-gray-800 leading-relaxed min-h-screen">
+
+  <main class="max-w-3xl mx-auto px-6 py-10">
+
+    <h1 class="text-3xl font-bold border-b-2 border-amber-500 pb-2 mb-6">
+      Évaluation par les pairs — Guide pour débutantes
+    </h1>
+
+    <p class="italic text-gray-600 mb-6">
+      Bonjour ! Pas de souci, on va y aller doucement. Imagine que ton prof t'explique l'exercice autour d'un café ☕
+    </p>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">De quoi parle l'exercice ?</h2>
+
+    <p class="mb-3">Tu es dans une classe avec <strong>13 camarades</strong> :</p>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Aya</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Cristian</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Cyrille</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">David</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Guillermo</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Jenifer</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Joelle</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Maximilian</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Mohammed</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Naomi</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Natalia</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Yolanda</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Yordano</span>
+    </div>
+
+    <p class="mb-3">Chacun a fait un travail : un <strong>tableau de bord</strong> (dashboard) à évaluer.</p>
+    <p class="mb-3">Le problème : <strong>qui évalue qui ?</strong></p>
+    <p class="mb-3">Tu ne veux pas que tout le monde évalue la même personne, ni que quelqu'un s'évalue lui-même. Tu veux un système <strong>équitable et automatique</strong> : le programme décide pour toi.</p>
+    <p class="mb-3">C'est un peu comme un <strong>Secret Santa</strong> (Amigo invisible) : chacun reçoit une personne à évaluer, sans se choisir soi-même.</p>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Connaissances que tu vas utiliser</h2>
+
+    <p class="mb-4">Voici les « blocs » de l'exercice :</p>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full bg-white shadow-sm rounded-lg overflow-hidden">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b">Concept</th>
+            <th class="px-4 py-2 text-left border-b">En mots simples</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b"><td class="px-4 py-2"><strong>Classe</strong></td><td class="px-4 py-2">Un moule pour créer des objets avec des propriétés fixes</td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><strong>Objet</strong></td><td class="px-4 py-2">Une fiche avec des données (revisor, revisado, repositorio)</td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><strong>Array / liste</strong></td><td class="px-4 py-2">Une collection d'éléments, comme <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">integrantes</code> et <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">revisiones</code></td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><strong>Boucle (for)</strong></td><td class="px-4 py-2">Parcourir la liste un par un</td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><strong>Nombre aléatoire</strong></td><td class="px-4 py-2">Choisir quelqu'un au hasard (<code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">Math.random()</code>)</td></tr>
+          <tr><td class="px-4 py-2"><strong>Conditions (if)</strong></td><td class="px-4 py-2">Appliquer les règles (ne pas s'évaluer soi-même, etc.)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Données à avoir prêtes</h2>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Liste <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">integrantes</code> — les 13 noms</h3>
+
+    <div class="flex flex-wrap gap-2 mb-4">
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Aya</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Cristian</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Cyrille</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">David</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Guillermo</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Jenifer</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Joelle</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Maximilian</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Mohammed</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Naomi</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Natalia</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Yolanda</span>
+      <span class="bg-white border border-stone-200 px-3 py-1 rounded text-sm">Yordano</span>
+    </div>
+
+    <p class="mb-3">Tu peux aussi les écrire ainsi dans ton code :</p>
+    <p class="mb-4"><code class="bg-stone-100 px-2 py-1 rounded text-sm">Aya, Cristian, Cyrille, David, Guillermo, Jenifer, Joelle, Maximilian, Mohammed, Naomi, Natalia, Yolanda, Yordano</code></p>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Liens <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">repositorio</code></h3>
+    <p class="mb-4">Idéalement, un objet ou une liste qui relie chaque nom à l'URL de son projet. Si tu ne les as pas encore, tu peux inventer des liens provisoires et les corriger plus tard.</p>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Ce que le programme doit faire, en 3 étapes</h2>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Étape 1 — Créer un « modèle » (la classe <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">Evaluadores</code>)</h3>
+
+    <p class="mb-4">Un <strong>modèle</strong>, c'est comme une <strong>fiche vierge</strong> avec 3 cases à remplir :</p>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full bg-white shadow-sm rounded-lg overflow-hidden">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b">Case</th>
+            <th class="px-4 py-2 text-left border-b">Signification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b"><td class="px-4 py-2"><strong>revisor</strong></td><td class="px-4 py-2">Qui fait l'évaluation (le correcteur)</td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><strong>revisado</strong></td><td class="px-4 py-2">Qui est évalué</td></tr>
+          <tr><td class="px-4 py-2"><strong>repositorio</strong></td><td class="px-4 py-2">Où trouver le travail (lien du projet)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mb-4">Chaque fiche = une paire « évaluateur → personne évaluée ».</p>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Étape 2 — Remplir une liste avec tout le monde</h3>
+
+    <p class="mb-3">Tu as déjà la liste des <strong>integrantes</strong> (les 13 noms).</p>
+    <p class="mb-3">Tu crées un tableau <strong><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">revisiones</code></strong> : une fiche par personne. Au début, tu ne remplis que <strong>revisor</strong> (le nom de la personne qui va évaluer).</p>
+
+    <p class="mb-2">Exemple :</p>
+    <ul class="list-disc pl-6 mb-4 space-y-1">
+      <li>Fiche 1 : revisor = Aya, revisado = ?, repositorio = ?</li>
+      <li>Fiche 2 : revisor = Cristian, revisado = ?, repositorio = ?</li>
+      <li>etc.</li>
+    </ul>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Étape 3 — Attribuer les paires (la partie « jeu de règles »)</h3>
+
+    <p class="mb-3">Pour <strong>chaque</strong> fiche, le programme choisit <strong>au hasard</strong> qui sera évalué, avec <strong>2 règles</strong> :</p>
+
+    <p class="mb-3"><strong>Règle 1 — Pas d'auto-évaluation</strong><br>
+    Aya ne peut pas évaluer Aya. Chacun évalue <strong>quelqu'un d'autre</strong>.</p>
+
+    <p class="mb-4"><strong>Règle 2 — Chacun est évalué une seule fois</strong><br>
+    Sur les 13 personnes, <strong>chaque nom</strong> doit apparaître <strong>exactement une fois</strong> dans la colonne « revisado ». Personne n'est oublié, personne n'est évalué deux fois.</p>
+
+    <p class="mb-4">Ensuite, tu remplis <strong>repositorio</strong> (le lien du travail de la personne évaluée).</p>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Image concrète</h2>
+
+    <p class="mb-4">À la fin, tu pourrais avoir quelque chose comme :</p>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full bg-white shadow-sm rounded-lg overflow-hidden">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b">Revisor (évalue)</th>
+            <th class="px-4 py-2 text-left border-b">Revisado (évalué)</th>
+            <th class="px-4 py-2 text-left border-b">Repositorio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b"><td class="px-4 py-2">Aya</td><td class="px-4 py-2">David</td><td class="px-4 py-2">lien du projet de David</td></tr>
+          <tr class="border-b"><td class="px-4 py-2">Cristian</td><td class="px-4 py-2">Naomi</td><td class="px-4 py-2">lien du projet de Naomi</td></tr>
+          <tr class="border-b"><td class="px-4 py-2">Cyrille</td><td class="px-4 py-2">Aya</td><td class="px-4 py-2">lien du projet de Aya</td></tr>
+          <tr><td class="px-4 py-2">…</td><td class="px-4 py-2">…</td><td class="px-4 py-2">…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mb-4">Chaque ligne = une mission : « Toi, tu évalues cette personne, voici où trouver son travail. »</p>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Pourquoi c'est un exercice de programmation ?</h2>
+
+    <ol class="list-decimal pl-6 space-y-2 mb-6">
+      <li><strong>Organiser des infos</strong> (classe + attributs)</li>
+      <li><strong>Travailler avec des listes</strong> (tableau d'objets)</li>
+      <li><strong>Appliquer des règles</strong> (pas soi-même, une fois chacun)</li>
+      <li><strong>Utiliser le hasard</strong> (nombre aléatoire pour choisir)</li>
+    </ol>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Point important (pour plus tard)</h2>
+
+    <div class="bg-amber-50 border-l-4 border-amber-500 p-4 my-6">
+      <p>« Choisir au hasard » + « chacun une seule fois » peut être <strong>un peu piégeux</strong> : le hasard pur ne garantit pas toujours que tout le monde soit couvert. En classe, on te demande surtout de <strong>comprendre la logique</strong> ; ton prof t'aidera peut-être à affiner l'algorithme.</p>
+    </div>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">Structure finale du projet</h2>
+
+    <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4"><code>Evaluacion por pares/
+├── js/
+│   ├── claseEvaluadores.js   ← moule (classe)
+│   ├── revisiones.js         ← données
+│   ├── funciones.js          ← logique
+│   └── app.js                ← application
+├── index.html                ← vue Tailwind
+└── guia.html</code></pre>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full bg-white shadow-sm rounded-lg overflow-hidden">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b">Fichier</th>
+            <th class="px-4 py-2 text-left border-b">Rôle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">claseEvaluadores.js</code></td><td class="px-4 py-2"><strong>Moule</strong> — seulement la classe <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">Evaluadores</code></td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">revisiones.js</code></td><td class="px-4 py-2"><strong>Données</strong> — noms, liens GitHub, <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">new Evaluadores(...)</code></td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">funciones.js</code></td><td class="px-4 py-2"><strong>Logique</strong> — <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">asignarPares</code>, sans HTML</td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">app.js</code></td><td class="px-4 py-2"><strong>Application</strong> — bouton, tableau, affichage</td></tr>
+          <tr><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">index.html</code></td><td class="px-4 py-2"><strong>Vue</strong> — structure de la page avec Tailwind CSS</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Comparaison avec le cours (tableau blanc)</h3>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full bg-white shadow-sm rounded-lg overflow-hidden">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b">Cours</th>
+            <th class="px-4 py-2 text-left border-b">Ton exercice</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">claseImagen.js</code></td><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">claseEvaluadores.js</code></td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">imagenes.js</code></td><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">revisiones.js</code></td></tr>
+          <tr><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">carrousel.js</code></td><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">funciones.js</code> + <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">app.js</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Structure de chaque fichier JavaScript (toujours la même)</h3>
+
+    <ol class="list-decimal pl-6 space-y-2 mb-6">
+      <li><strong>IMPORTATION DE MODULES</strong> → <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">import</code> si tu as <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">funciones.js</code></li>
+      <li><strong>DÉCLARATION DE VARIABLES</strong> → <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">getElementById</code> / <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">querySelector</code></li>
+      <li><strong>DÉCLARATION DE FONCTIONS</strong> → bibliothèque + parfois <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">funcionMain</code></li>
+      <li><strong>EXÉCUTION DU CODE</strong> → <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">addEventListener("click", funcionMain)</code></li>
+    </ol>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Bibliothèque vs Application</h3>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full bg-white shadow-sm rounded-lg overflow-hidden">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b">Couche</th>
+            <th class="px-4 py-2 text-left border-b">Ce qu'elle fait</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b"><td class="px-4 py-2"><strong>Bibliothèque</strong></td><td class="px-4 py-2">Fonctions qui ne travaillent qu'avec des données. Entrée = paramètres, sortie = résultat. Tu la copies dans d'autres exercices sans la modifier.</td></tr>
+          <tr><td class="px-4 py-2"><strong>Application</strong></td><td class="px-4 py-2">Tout ce qui parle avec la page : lire les inputs, appeler la bibliothèque, afficher les résultats. Change à chaque exercice.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mb-4">L'<strong>écouteur</strong> (<code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">addEventListener</code>) ne fait qu'une chose : lancer <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">funcionMain</code> quand l'utilisateur clique sur le bouton.</p>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">À quoi sert <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">export</code> ?</h2>
+
+    <p class="mb-3">Dans <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">claseEvaluadores.js</code> ou <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">revisiones.js</code>, tu écris :</p>
+
+    <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4"><code>export class Evaluadores { ... }
+export const integrantes = [...];</code></pre>
+
+    <p class="mb-3">Ça veut dire : <strong>« Ces éléments peuvent être utilisés depuis un autre fichier »</strong>.</p>
+
+    <p class="mb-3">Dans <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">app.js</code>, tu les récupères avec <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">import</code> :</p>
+
+    <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4"><code>import { integrantes, crearRevisiones } from "./revisiones.js";
+import { asignarPares } from "./funciones.js";</code></pre>
+
+    <ul class="list-disc pl-6 space-y-2 mb-4">
+      <li><strong>Sans <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">export</code></strong> → l'autre fichier ne les voit pas.</li>
+      <li><strong>Avec <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">export</code> + <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">import</code></strong> → chaque fichier a son rôle, mais ils sont connectés.</li>
+    </ul>
+
+    <p class="mb-3">Dans le HTML, il faut aussi :</p>
+
+    <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4"><code>&lt;script type="module" src="js/app.js"&gt;&lt;/script&gt;</code></pre>
+
+    <p class="mb-4">Le <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">type="module"</code> active les modules dans le navigateur.</p>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Analogie simple</h3>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full bg-white shadow-sm rounded-lg overflow-hidden">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b">Élément</th>
+            <th class="px-4 py-2 text-left border-b">Rôle</th>
+            <th class="px-4 py-2 text-left border-b">Analogie</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">claseEvaluadores.js</code></td><td class="px-4 py-2">Moule</td><td class="px-4 py-2">Le patron pour fabriquer les objets</td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">revisiones.js</code></td><td class="px-4 py-2">Données</td><td class="px-4 py-2">Les fiches remplies avec <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">new Evaluadores()</code></td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">funciones.js</code></td><td class="px-4 py-2">Logique</td><td class="px-4 py-2">Les règles du tirage au sort</td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">export</code></td><td class="px-4 py-2">« Partager »</td><td class="px-4 py-2">Marquer ce qu'un autre fichier peut utiliser</td></tr>
+          <tr class="border-b"><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">app.js</code></td><td class="px-4 py-2">Application</td><td class="px-4 py-2">Ton exercice concret avec le bouton</td></tr>
+          <tr><td class="px-4 py-2"><code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">import</code></td><td class="px-4 py-2">« Récupérer »</td><td class="px-4 py-2">Copier ce dont tu as besoin dans ton fichier</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Est-ce obligatoire d'utiliser <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">export</code> ?</h3>
+
+    <p class="mb-4"><strong>Non.</strong> Ça dépend de comment tu organises le code :</p>
+
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full bg-white shadow-sm rounded-lg overflow-hidden">
+        <thead class="bg-stone-100">
+          <tr>
+            <th class="px-4 py-2 text-left border-b">Option</th>
+            <th class="px-4 py-2 text-left border-b">Comment</th>
+            <th class="px-4 py-2 text-left border-b">Avantages / inconvénients</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-b">
+            <td class="px-4 py-2"><strong>5 fichiers + modules</strong> (recommandé)</td>
+            <td class="px-4 py-2">Classe, données et logique séparées avec <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">export</code> / <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">import</code></td>
+            <td class="px-4 py-2">Comme au cours, clair et réutilisable</td>
+          </tr>
+          <tr class="border-b">
+            <td class="px-4 py-2"><strong>1 seul fichier</strong></td>
+            <td class="px-4 py-2">Tout dans <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">app.js</code>, sans <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">export</code> ni <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">import</code></td>
+            <td class="px-4 py-2">Plus simple au début, mais tout est mélangé</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2"><strong>2 fichiers sans modules</strong> (ancien style)</td>
+            <td class="px-4 py-2">Deux balises <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">&lt;script&gt;</code>, variables globales</td>
+            <td class="px-4 py-2">Fonctionne, mais moins clair et moins moderne</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="text-lg font-medium text-gray-600 mt-6 mb-3">Comment les fichiers se connectent</h3>
+
+    <pre class="bg-gray-800 text-gray-100 p-4 rounded-lg overflow-x-auto text-sm mb-4"><code>claseEvaluadores.js   revisiones.js        funciones.js
+       │                     │                     │
+       └──── import ─────────┘                     │
+                             │                     │
+                      new Evaluadores()     asignarPares
+                             │                     │
+                             └──── import ─────────┤
+                                                   │
+                                              app.js  ←  index.html
+                                         addEventListener("click")
+                                                   ↓
+                                            affiche le tableau</code></pre>
+
+    <p class="mb-4">Dans le HTML, tu ne charges que <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">app.js</code>. C'est lui qui importe depuis <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">revisiones.js</code> et <code class="bg-stone-100 px-1.5 py-0.5 rounded text-sm">funciones.js</code>.</p>
+
+    <h2 class="text-xl font-semibold text-gray-700 mt-8 mb-4">En résumé</h2>
+
+    <p><strong>En une phrase :</strong> tu construis un petit robot qui distribue les corrections entre camarades, sans qu'on s'évalue soi-même et sans oublier personne.</p>
+
+  </main>
+
+</body>
+</html>
