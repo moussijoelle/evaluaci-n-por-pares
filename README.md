@@ -1,28 +1,27 @@
-﻿# Evaluación por pares
+# Evaluación por pares
 
-Asigna revisores y revisados de forma automática y muestra la tabla de pares.
+Genera asignaciones revisor ↔ revisado y las pinta en una tabla.
 
 ## Qué hace
 
-- Switch para generar las asignaciones
-- Tabla: revisor, revisado y enlace al repo
-- Usa módulos ES (`revisiones.js`, `funciones.js`)
+- Switch para lanzar el emparejamiento
+- Tabla con revisor, revisado y enlace al repo
+- Módulos ES: `revisiones.js` + `funciones.js`
 - Guía en `guia.html`
 
 ## Cómo probarlo
 
-Abre `index.html` con un servidor local o la demo (módulos ES).
+Mejor con la demo (o un servidor local) porque usa `import`.
 
 Demo: https://moussijoelle.github.io/evaluaci-n-por-pares/
 
 ## Cómo lo construí
 
-- HTML + JavaScript módulos + Tailwind
-- Destructuración de datos y `asignarPares`
+Destructuración + `asignarPares`. Tailwind en la tabla.
 
 ## Cómo verificarlo
 
-Sin tests. Activo el switch y miro que la tabla se rellene.
+Activo el switch y cuento que salgan tantas filas como toque.
 
 ---
 
